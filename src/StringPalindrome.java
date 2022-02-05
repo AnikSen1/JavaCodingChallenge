@@ -7,6 +7,7 @@ public class StringPalindrome {
 		Scanner input=new Scanner(System.in);
 		original=input.nextLine();
 		int length=original.length();
+		
 		for(int i=length-1;i>=0;i--) {
 			reverse=reverse+original.charAt(i);
 		}
@@ -18,7 +19,7 @@ public class StringPalindrome {
 			System.out.println("Your given string is not a palindrome");
 		
 		}
-
+		
 		
 	}
 

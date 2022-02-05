@@ -6,33 +6,37 @@ public class ReverseNumber {
 		while(number!=0) {
 			int reminder=number%10;
 			System.out.print(reminder);
-			int removeLastDigit= number-reminder;
-			number=removeLastDigit/10;	
+			number=number/10;	
 		}
 		
 		
 		System.out.println(" ");
 		
-		int number1=12340, r=0;
-		while(number1!=0) {
-			int reminder1=number1%10;
-			r=r*10+reminder1;
-			number1=number1/10;
-		
+		int numberI=12340, 
+				rev=0;
+		while(numberI!=0) {
+			rev=rev*10+numberI%10;
+			numberI=numberI/10;
 		}
-		System.out.print(r);
+		System.out.println(rev);	
 		
 		
-		System.out.println(" ");
-		int number2=12340;
-		while(number2!=0) {
-			int reminder2=number2%10;
-			System.out.print(reminder2);
-			int removeLastDigit2= number2-reminder2;
-			number2=removeLastDigit2/10;
-			
-		}
+		int num=345;
+		StringBuffer sBuffer=new StringBuffer(String.valueOf(num));
+		sBuffer.reverse();
+		System.out.println(sBuffer);
+		//StringBuffer reverse=sBuffer.reverse();
+		//System.out.println(reverse);
 		
+		
+		
+		StringBuilder sBuilder=new StringBuilder();
+		sBuilder.append(String.valueOf(num));
+		sBuilder.reverse();
+		System.out.println(sBuilder);
+		//StringBuilder reverse=sBuilder.reverse();
+		//System.out.println(reverse);
+				
 	}
 
 }
