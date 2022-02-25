@@ -19,15 +19,17 @@ public class FibonacciNumber {
 
 		System.out.println();	
 
+		
+		
 
-		System.out.println("For getting n numbers of fibonacci numbers give input n-2");
+		System.out.println("For getting n numbers of fibonacci numbers give input n");
 		Scanner in=new Scanner(System.in);
 		int n=in.nextInt();
 		int a=0, b=1, nextNum;
 
 		System.out.print(a+" "+b); // without ln
 
-		for(int i=1;i<=n;i++) {
+		for(int i=1;i<=n-2;i++) {
 			nextNum=a+b;
 			System.out.print(" "+nextNum); // without ln
 			a=b;

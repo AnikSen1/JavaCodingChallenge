@@ -2,26 +2,28 @@
 public class HighestNumberOfArray {
 
 	public static void main(String[] args) {
-		int[] numbers= {10,4,36788,0,99,8};
-		int value=numbers[0];
-		for(int i=0;numbers.length>i;i++) {
+		
+		int[] numbers= {10,4,0,99,8,36788};
+		int largestValue=numbers[0];
+		
+		for(int i=1;numbers.length-1>=i;i++) {
 			int newValue=numbers[i];
-			if(newValue>value) {
-				value=newValue;
+			if(newValue>largestValue) {
+				largestValue=newValue;
 			}
 		}
-		System.out.println("Highest Number:"+value);
+		System.out.println("Highest Number:"+largestValue);
 		
 		
 		
-	
+		int smallestValue=numbers[0];
 		for(int i=0;numbers.length>i;i++) {
 			int newValue=numbers[i];
-			if(newValue<value) {
-				value=newValue;
+			if(newValue<smallestValue) {
+				smallestValue=newValue;
 			}
 		}
-		System.out.println("Lowest Number:"+value);
+		System.out.println("Lowest Number:"+smallestValue);
 		
 	
 		//Using ternary operator (without if condition)
