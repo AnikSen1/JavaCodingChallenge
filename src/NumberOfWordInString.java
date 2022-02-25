@@ -1,10 +1,18 @@
+import java.util.Scanner;
 
 public class NumberOfWordInString {
 
 	public static void main(String[] args) {
-		String sentence="I am a QA Engineer";
+		
+		Scanner sc=new Scanner(System.in);
+		String sentence=sc.nextLine();
+		
 		int numberOfWord=sentence.split(" ").length;
-		System.out.println(numberOfWord);
+		
+		if(sentence=="") {
+			numberOfWord=0;
+		}
+		System.out.println("Number Of Word in this sentence: "+numberOfWord);
 
 	}
 
